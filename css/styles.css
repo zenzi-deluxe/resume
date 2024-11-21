@@ -10991,3 +10991,13 @@ section.resume-section .resume-section-content {
 .paper-img {
     max-height: 15em;
 }
+
+.profile-pic {
+    visibility: visible;
+}
+
+@media (min-width: 992px) {
+    .profile-pic {
+        visibility: hidden;
+    }
+}
