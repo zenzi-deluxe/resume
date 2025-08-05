@@ -10988,16 +10988,20 @@ section.resume-section .resume-section-content {
     line-height: 1.5; /* Better readability */
 }
 
+/* Custom settings - Daniele */
+ 
 .paper-img {
     max-height: 15em;
 }
 
 .profile-pic {
     visibility: visible;
+    display: block;
 }
 
 @media (min-width: 992px) {
     .profile-pic {
         visibility: hidden;
+        display: none;
     }
 }
