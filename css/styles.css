@@ -10997,6 +10997,7 @@ section.resume-section .resume-section-content {
 .profile-pic {
     visibility: visible;
     display: block;
+    max-width: 30%;
 }
 
 @media (min-width: 992px) {
@@ -11005,3 +11006,79 @@ section.resume-section .resume-section-content {
         display: none;
     }
 }
+
+/* Create Canvas for PhD game */
+
+#gameCanvas {
+  transition: all 0.8s ease-in-out;
+  display: block;
+}
+
+#gameCanvas.collapsed {
+  transform: scaleY(0);
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#gameLegend {
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+#gameLegend.collapsed {
+  transform: scaleY(0);
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#gameLegend span {
+    margin-left: 10px;
+}
+
+  #gameCanvasWrapper {
+    display: none; /* hidden on small screens */
+  }
+
+  @media (min-width: 1920px) {
+    #gameCanvasWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 300px;
+      background: #f5f5f5;
+      border: 2px solid #333;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      padding: 10px;
+      z-index: 1000;
+    }
+
+    #phdButton {
+      display: none;
+      margin-bottom: 8px; /* small gap above canvas */
+      width: 100%;
+      padding: 6px;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #gameCanvas {
+      width: 100%;
+      height: 400px;
+      display: block;
+      background: white;
+      border-radius: 8px;
+    }
+  }
